@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="bot1.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="cod.css">
+
+<!-- ChatBot -->
+<link rel="stylesheet" type="text/css" href="callon.css">
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="jquery.convform.js"></script>
+<script type="text/javascript" src="custom.js"></script>
+
+</head>
+<body>
+<!-- ChatBot -->
+<div class="chat_icon">
+	<i class="fa fa-comments" aria-hidden="true"></i>
+</div>
+
+<div class="chat_box">
+	<div class="my-conv-form-wrapper">
+		<form action="" method="GET" class="hidden">
+
+      <select data-conv-question="WHICH GAME DO YOU LIKE MOST????" name="category">
+        <option value="GTA 5">GTA 5 ONLINE</option>
+        <option value="CYBERPUNK">CYBERPUNK 2077</option>
+      </select>
+
+      <div data-conv-fork="category">
+        <div data-conv-case="GTA 5">
+          <input type="text" name="GTA 5" data-conv-question="GTA 5 FAVOURITE CHARACTER">    
+        </div>
+        <div data-conv-case="CYBERPUNK" data-conv-fork="first-question2">
+          <input type="text" name="CYBERPUNK" data-conv-question="CYBERPUNK FAVOURITE CHARACTER"> 
+        </div>
+      </div>
+
+      <input type="text" name="name" data-conv-question="Please, Enter your name">
+
+      <input type="text" data-conv-question="Hi {name},
+       <br> It's a pleasure to meet you." data-no-answer="true"></br>
+
+      <input data-conv-question="Enter your e-mail" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" name="email" required placeholder="What's your e-mail?">
+
+      <select data-conv-question="Please Conform">
+        <option value="Yes">Conform</option>
+      </select>
+
+  	</form>
+	</div>
+</div>
+<!-- ChatBot end -->
+<header class="header">
+	<div class="container-fluid">
+		<div class="row d-flex justify-content-between">
+			<div class="col-md-auto">
+				<a href="#!" class="logo"><img src="logo.png" width="60px" alt="logo"></a>
+			</div>
+			<div class="col-md-auto">
+				<nav class="main_nav">
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#contact">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>		
+	</div>
+</header>	
+
+<div class="banner d-flex align-items-center" style="background-image: url('PHOTO.jpg');" id="home">
+	<ul class="socila_links">
+		<li><a href="https://www.facebook.com/iamanirbanbarman"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+		<li><a href="https://www.instagram.com/anirban_barman__/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+		<li><a href="https://twitter.com/SIXEYEGAMERS"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+	</ul>	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="banner_cont">
+					<h1>ANIRBAN BARMAN</h1>
+					<p class="unselectable"> DEVELOPE BY ANIRBAN BARMAN </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>			
+
+<div class="about-section" id="about">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-5 text-justify">
+				<h2 class="bdr-btm">SITE CREATED BY ANIRBAN BARMAN</h2>
+				<p>THIS IS ONLY TESTING SITE MAIN CONTENT FOR CHATBOT  </p>
+				<a href="#contact" class="btn1">Contact Us</a>	
+			</div>
+			<div class="col-md">
+				<div class="about-box">
+</div>
+
+
+
+<div class="contact-section d-md-flex" id="contact">
+  <div class="col-md-6 col-12 contact_section_left">
+    <div class="contact_box">
+      <i class="fa fa-phone"></i>
+      <h3>Phone</h3>
+      <p>6290871471</p>
+    </div>
+    <div class="contact_box">
+      <i class="fa fa-envelope"></i>
+      <h3>Email</h3>
+	 <p>sixeyegamers@gmail.com</p>
+    </div>
+    <div class="contact_box">
+      <i class="fa fa-map-marker"></i>
+      <h3>Address</h3>
+      <p>BARUIPUR PADMAPUKUR</p>
+    </div>
+  </div>
+  <div class="col-md-6 col-12 contact_section_right d-flex align-items-center">
+    <div class="contact_box">
+      <h2 class="bdr-btm">CONTACT US</h2>
+      <form>
+        <div>
+          <input type="text" name="" placeholder="Name">
+          <input type="text" name="" placeholder="Email">
+          <input type="text" name="" placeholder="Subject">
+          <textarea placeholder="Message"></textarea>
+          <input type="submit" class="inline-block" name="" value="Send Message">
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+	portfolioList = document.querySelectorAll('.portfolio-box');
+	portfolioList.forEach(function(portfolioPic) {
+		portfolioPic.addEventListener('click',function(){
+			bg = this.style.backgroundImage;
+			document.getElementById('port_pop_pic_bg').classList.add("active")
+			document.getElementById('port_pop_pic').style.backgroundImage = bg
+			document.getElementById('port_pop_pic').classList.add("active")
+		});	
+	})
+	document.getElementById('port_pop_pic_bg').addEventListener('click',function(){
+			document.getElementById('port_pop_pic_bg').classList.remove("active")
+			document.getElementById('port_pop_pic').classList.remove("active")
+	})
+</script>
+
+
+</body>
+</html>
